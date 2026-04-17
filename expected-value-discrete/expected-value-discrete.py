@@ -12,4 +12,5 @@ def expected_value_discrete(x, p):
 
     if not np.isclose(np.sum(p),1):
         raise ValueError("Probabability Sum should be 1")
+        
     return np.dot(x,p)
