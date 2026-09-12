@@ -8,7 +8,7 @@ def cross_entropy_loss(y_true: list[int], y_pred: list[list[float]]) -> float:
     y_pred = np.array(y_pred)
     filtered_probabilities = y_pred[np.arange(len(y_pred)), y_true]
     
-    loss = np.log(filtered_probabilities) * -1
+    loss = np.log(filtered_probabilities)
     summation = np.sum(loss)
-    return summation/len(y_true)
+    return -summation/len(y_true)
     
